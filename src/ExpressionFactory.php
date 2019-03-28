@@ -71,19 +71,19 @@ class ExpressionFactory
             }))
           ->addOperator(new Operator('<', 3, Operator::LEFT_ASSOCIATIVE, 2,
             function($values) {
-                return (int)($this->math->compare($values[0], $values[1]) < 0);
+                return (int)($this->math->compare($values[0], $values[1],2) < 0);
             }))
           ->addOperator(new Operator('<=', 3, Operator::LEFT_ASSOCIATIVE, 2,
             function($values) {
-                return (int)($this->math->compare($values[0], $values[1]) <= 0);
+                return (int)($this->math->compare($values[0], $values[1],2) <= 0);
             }))
           ->addOperator(new Operator('>', 3, Operator::LEFT_ASSOCIATIVE, 2,
             function($values) {
-                return (int)($this->math->compare($values[0], $values[1]) > 0);
+                return (int)($this->math->compare($values[0], $values[1],2) > 0);
             }))
           ->addOperator(new Operator('>=', 3, Operator::LEFT_ASSOCIATIVE, 2,
             function($values) {
-                return (int)($this->math->compare($values[0], $values[1]) >= 0);
+                return (int)($this->math->compare($values[0], $values[1],2) >= 0);
             }));
 
         // Provide basic logic operators.
